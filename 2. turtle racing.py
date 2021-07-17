@@ -1,4 +1,4 @@
-# -------Turtle Racing--------------#
+# -------Turtle Race with turtle GUI--------------#
 import random
 import turtle
 from turtle import Turtle, Screen
@@ -12,7 +12,7 @@ y_positions = [-50, -10, 30, 70, 110, 150]
 
 turtle_list = []
 
-# creates 6 turtles
+# creates 6 turtles and stores that in that turtle_list
 for turtle_index in range(0, 6):
     tutsy = Turtle(shape="turtle")
     tutsy.color(colors_list[turtle_index])
@@ -36,7 +36,7 @@ while game_started:
                 print(f"Winner : {tutsy.pencolor()}")
                 print("You lost!")
 
-        # making each turtle move forward by a random disctance
+        # making each turtle move forward by a random distance
         rand_move_distance = random.randint(1, 10)
         tutsy.forward(rand_move_distance)
 
